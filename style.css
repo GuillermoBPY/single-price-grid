@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+  --Cyan: rgb(44, 179, 177);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: rgb(229, 239, 245);
+  --GrayishBlue: hsl(218, 22%, 67%);
+  --LigthCyan: rgb(75, 190, 189);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+.main__container {
+  min-height: 100vh;
+  background-color: var(--LightGray);
+  padding: 2rem 1rem;
+}
+
+.card .card__article {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card .card__article:first-child {
+  background-color: white;
+  padding-bottom: 2rem;
+}
+
+.card .card__article:first-child h1 {
+  color: var(--Cyan);
+  font-size: 1.5rem;
+}
+.card .card__article:first-child h3 {
+  color: var(--BrightYellow);
+}
+
+.card .card__article:first-child p {
+  line-height: 1.8rem;
+  color: var(--GrayishBlue);
+}
+
+.card .card__article:nth-child(2) {
+  background-color: var(--Cyan);
+}
+
+.card .card__article:last-child {
+  background-color: var(--LigthCyan);
+}
+
+.color--white {
+  color: var(--LightGray);
+}
+
+.card .card__article:nth-child(2) .pricebox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card .card__article:nth-child(2) .pricebox span:first-child {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.card .card__article:nth-child(2) p {
+  margin-top: -1rem;
+  font-size: 1.1rem;
+}
+.card .card__article:nth-child(2) button {
+  cursor: pointer;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 350px;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--BrightYellow);
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  -webkit-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.507);
+  -moz-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.507);
+  box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.507);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card .card__article:nth-child(2) button:hover {
+  background-color: hsl(71, 62%, 47%);
+}
+.card .card__article:nth-child(2) button:active {
+  background-color: hsl(71, 63%, 30%);
+  transform: translateY(10px);
+}
+
+.color--smoke {
+  font-weight: 400;
+  color: rgba(244, 238, 238, 0.644);
+}
+
+.card .card__article:last-child p {
+  width: 70%;
+  line-height: 1.8rem;
+}
+
+@media (width >= 800px) {
+  .main__container {
+    display: grid;
+    place-content: center;
+  }
+
+  .card {
+    margin: 0 auto;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .card .card__article:first-child {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  .card .card__article:nth-child(2) {
+    padding: 2rem;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .card .card__article:last-child {
+    padding: 2rem;
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+}
+
+.attribution {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.attribution a {
+  color: var(--Cyan);
+  font-weight: 700;
+  cursor: pointer;
+}
